@@ -1,0 +1,23 @@
+Topography generation.
+
+atm-topo-v2-quasiuniform.sh:
+  Andrew M. Bradley (ambradl@sandia.gov)
+  Procedure used to generate the ne30 topo for v2. See numbered comments in the
+script describing each step.
+  Dependencies:
+    1. TempestRemap. Usually availabe in ~zender/bin. Otherwise, clone from
+          https://github.com/ClimateGlobalChange/tempestremap
+       and build following the instructions on that page.
+    2. cube_to_target. cd to
+         ${E3SM}/components/eam/tools/topo_tool/cube_to_target
+       and follow the instructions in README.md there to build cube_to_target.
+    3. homme_tool. Make a build directory outside of ${E3SM}. Run cmake:
+          rm -rf CMake*
+          cmake \
+              -C ${E3SM}/components/homme/cmake/machineFiles/compy-intel.cmake \
+              ${E3SM}/components/homme
+       Then build homme_tool:
+          make -j4 homme_tool
+       This builds src/tool/homme_tool.
+In the script, see the section starting "## Dependencies:" for links to each of
+these.
