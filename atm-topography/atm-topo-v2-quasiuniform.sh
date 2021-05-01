@@ -16,7 +16,7 @@ homme_tool=${HOMME}/src/tool/homme_tool
 
 # 1. Use TempestRemap to create ne30pg4,2 grids:
 
-${tempest_root}/GenerateCSMesh --alt --res 256 --file ${cubedsphere}.g
+${tempest_root}/GenerateCSMesh --alt --res ${ne} --file ${cubedsphere}.g
 ${tempest_root}/GenerateVolumetricMesh --in ${cubedsphere}.g --out ${cubedsphere}pg2.g --np 2 --uniform
 ${tempest_root}/GenerateVolumetricMesh --in ${cubedsphere}.g --out ${cubedsphere}pg4.g --np 4 --uniform
 ${tempest_root}/ConvertExodusToSCRIP --in ${cubedsphere}pg4.g --out ${cubedsphere}pg4_scrip.nc

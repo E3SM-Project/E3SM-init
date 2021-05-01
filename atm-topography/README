@@ -2,8 +2,9 @@ Topography generation.
 
 atm-topo-v2-quasiuniform.sh:
   Andrew M. Bradley (ambradl@sandia.gov)
-  Procedure used to generate the ne30 topo for v2. See numbered comments in the
+  Procedure to generate the ne30pg2 topo for v2. See numbered comments in the
 script describing each step.
+
   Dependencies:
     1. TempestRemap. Usually availabe in ~zender/bin. Otherwise, clone from
           https://github.com/ClimateGlobalChange/tempestremap
