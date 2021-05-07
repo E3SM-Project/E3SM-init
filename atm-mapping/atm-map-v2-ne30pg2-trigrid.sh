@@ -1,5 +1,5 @@
-tm_grid_file=ne30pg2.g               # see atm-topograhy
-atm_scrip_grid_file=ne30pg2_scrip.nc # see atm-topograhy
+tm_grid_file=ne30pg2.g               # see atm-topography
+atm_scrip_grid_file=ne30pg2_scrip.nc # see atm-topography
 ocn_grid_file=ocean.oEC60to30v3.scrip.181106.nc
 lnd_grid_file=SCRIPgrid_0.5x0.5_nomask_c110308.nc
 
@@ -15,7 +15,7 @@ date=200110
 
 function run {
     echo "src $src dst $dst map $map"
-    ../compsetfiles/ncremap -a tempest --src_grd=$src --dst_grd=$dst -m $map \
+    ncremap -a tempest --src_grd=$src --dst_grd=$dst -m $map \
         -W '--in_type fv --in_np 1 --out_type fv --out_np 1 --out_format Classic --correct_areas' \
         $extra
 }

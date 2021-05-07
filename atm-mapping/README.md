@@ -15,7 +15,7 @@ generate_mapping_files.sh
 
 atm-map-v2-ne30pg2.sh:
   Andrew M. Bradley (ambradl@scat andia.gov)
-  Procedure to generate the ne30pg2 map files for v2.
+  Procedure to generate the ne30pg2 map files for the v2 trigrid configuration.
 
   Dependencies:
   1. ncremap.
