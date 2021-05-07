@@ -37,6 +37,7 @@ for grid_name in ${atm_grid_name} ${lnd_grid_name}; do
     GenerateOfflineMap \
         --in_mesh ${grid_file} --out_mesh ${ocn_grid_file} --ov_mesh ${overlap_mesh} \
         --in_type fv --in_np 1 --out_type fv --out_np 1 --correct_areas \
+        --out_format Classic \
         --out_map ${map_file}
     fi
     echo "Generate ocn -> atm map.."
@@ -45,6 +46,7 @@ for grid_name in ${atm_grid_name} ${lnd_grid_name}; do
         GenerateOfflineMap \
             --in_mesh ${ocn_grid_file} --out_mesh ${grid_file} --ov_mesh ${overlap_mesh} \
             --in_type fv --in_np 1 --out_type fv --out_np 1 --correct_areas \
+            --out_format Classic \
             --out_map ${map_file}
     fi
 done
