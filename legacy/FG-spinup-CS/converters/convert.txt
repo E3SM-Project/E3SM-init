@@ -1,0 +1,8 @@
+1. Extract SST
+1.1 Rename files twice for some reason
+2. Extract IceArea
+3. Compute climos seperately
+4. Merge individual climos
+5. ? regridding? NO?
+6 diddling data
+7. extract domains file (for gridding only???)
